@@ -9,7 +9,7 @@ var express = require('express');
 var config = require('./config/environment');
 
 var app = express();
-var server = require('http').createServer(app);
+var server = require('https').createServer(config.https, app);
 
 require('./config/express.js')(app);
 require('./routes.js')(app);
