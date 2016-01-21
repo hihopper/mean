@@ -1,6 +1,8 @@
 'use strict'
 
 var express = require('express');
+var favicon = require('serve-favicon');
+var morgan = require('morgan')
 var bodyParser = require('body-parser');
 var path = require('path');
 //var logger = require('express-logger');
@@ -23,15 +25,18 @@ module.exports = function(app) {
     next();
   });
 
-
   if ('production' === env || 'heroku' === env) {
+    app.use(favicon(path.join(config.root, 'public','favicon.png')));
     app.use(express.static(path.join(config.root, 'public')));
     app.set('appPath', path.join(config.root, 'public'));
 //    app.use(logger({path: path.join(config.root, 'server/log/server.log')}));
   }
 
   if ('development' === env || 'test' === env) {
+    app.use(favicon(path.join(config.root, 'client','favicon.png')));
     app.use(express.static(path.join(config.root, 'client')));
     app.set('appPath', path.join(config.root, 'client'));
   }
+
+  app.use(morgan('dev'));
 };

@@ -46,8 +46,8 @@ module.exports = function(grunt) {
       },
       dev: {
         options: {
-          script: 'server/app_cluster.js',
-//          script: 'server/app.js',
+//          script: 'server/app_cluster.js',
+          script: 'server/app.js',
           debug: true,
           //node_env: 'production',
           //node_env: 'heroku',

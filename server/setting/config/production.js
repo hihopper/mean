@@ -33,7 +33,7 @@ var config = {
   },
 
   ssl: {
-    use: process.env.SSL || false,
+    use: process.env.SSL || true,
     key: 'server/setting/ssl/hihopper.pem',
     cert: 'server/setting/ssl/hihopper.crt'
   }
