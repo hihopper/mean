@@ -1,11 +1,11 @@
 'use strict';
 
 angular.module('smsApp')
-  .controller('Menu1Ctrl', function ($scope, $modal, menu1Svc) {
+  .controller('Menu1Ctrl', function ($scope, $modal, SamplesAPI) {
 
     $scope.samples = {};
 
-    menu1Svc.get({page:0}, function(data) {
+    SamplesAPI.get({page:1}, function(data) {
       $scope.samples = data;
     }, function(err) {
       $scope.samples.err = err.statusText;
@@ -14,7 +14,7 @@ angular.module('smsApp')
 
     $scope.create = function() {
       var modal = $modal.open({
-        templateUrl: 'app/menu1/create/menu1.create.html',
+        templateUrl: 'app/menu1/popup/menu1.create.html',
         controller: 'Menu1CreateCtrl'
       });
 
@@ -25,4 +25,33 @@ angular.module('smsApp')
         console.log('fail');
       });
     };
+
+    $scope.update = function(row) {
+      var modal = $modal.open({
+        templateUrl: 'app/menu1/popup/menu1.update.html',
+        controller: 'Menu1UpdateCtrl',
+        resolve: { row: function() { return row; }}
+      });
+      
+      modal.result.then( function(res) {
+        console.log('succ');
+      }, function(err) {
+        console.log('fail');
+      });
+    };
+
+    $scope.destroy = function(row) {
+      var modal = $modal.open({
+        templateUrl: 'app/menu1/popup/menu1.destroy.html',
+        controller: 'Menu1DestroyCtrl',
+        resolve: { row: function() { return row; }}
+      });
+
+      modal.result.then( function(res) {
+        console.log('succ');
+      }, function(err) {
+        console.log('fail');
+      });
+    };
+
   });

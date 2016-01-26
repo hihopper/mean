@@ -1,16 +1,15 @@
 'use strict'
 
 var cluster = require('cluster');
+var config = require('./setting/config');
+var logger = require('./components/logger');
 
-function startWorker(isFirst) {
+logger.config(config.log);
 
-  var new_worker_env = {};
-  if( isFirst ) {
-    new_worker_env.isFirst = true;
-}
 
-  var worker = cluster.fork(new_worker_env);
-  console.log('CLUSTER: worker %d started', worker.id);
+function startWorker() {
+  var worker = cluster.fork();
+  logger.info('CLUSTER: worker %d started', worker.id);
 }
 
 if( cluster.isMaster ) {
@@ -19,16 +18,17 @@ if( cluster.isMaster ) {
     startWorker();
   });
 */
-  startWorker(true);
-  startWorker(false);
+  startWorker();
+  startWorker();
+
   cluster.on('disconnect', function(worker) {
-    console.log('CLUSTER: worker %d disconnected from the cluster', worker.id);
+    logger.info('CLUSTER: worker %d disconnected from the cluster', worker.id);
   });
   cluster.on('exit', function(worker, code, signal) {
-    console.log('CLUSTER: worker %d died with exit code %d (%s)', worker.id, code, signal);
+    logger.info('CLUSTER: worker %d died with exit code %d (%s)', worker.id, code, signal);
     startWorker();
   });
 }
 else {
-  require('./app.js')();
+  require('./app')();
 }

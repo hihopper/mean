@@ -13,9 +13,13 @@
     "ejs": "^2.3.4",
     "express": "^4.13.3",
     "express-logger": "0.0.3",
+    "lodash": "^4.0.1",
+    "moment": "^2.11.1",
     "mongoose": "^4.3.6",
     "morgan": "^1.6.1",
-    "serve-favicon": "^2.3.0"
+    "serve-favicon": "^2.3.0",
+    "winston": "^2.1.1",
+    "winston-daily-rotate-file": "^1.0.1"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

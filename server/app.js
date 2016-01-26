@@ -8,28 +8,38 @@ var express = require('express');
 var mongoose = require('mongoose');
 
 var config = require('./setting/config');
+global.logger = require('./components/logger');
+
+global.logger.config(config.log);
 
 mongoose.connect(config.mongo.uri, config.mongo.options);
 mongoose.connection.on('error', function(err) {
-  console.error('MongoDB connection error: ' + err);
+  global.logger.info('MongoDB connection error: ' + err);
   process.exit(-1);
 });
 
 mongoose.connection.on('connected', function () {
-    console.log('MongoDB connected!');
+    global.logger.info('MongoDB connected!');
 });
 mongoose.connection.on('reconnected', function () {
-    console.log('MongoDB reconnected!');
+    global.logger.info('MongoDB reconnected!');
 });
 mongoose.connection.on('disconnected', function () {
-    console.log('MongoDB disconnected!');
+    global.logger.info('MongoDB disconnected!');
     process.exit(-1);
 });
 
-if(config.seedDB) { require('./setting/seed'); }
+
+if(config.seedDB) {
+//  require('./setting/seed');
+}
 
 
 var app = express();
+
+if(config.seedDB) {
+    app.use('/api/seedDB', require('./setting/seed'));
+}
 
 var server = config.ssl.use ? server = require('https').createServer(require('./ssl'), app)
                             : server = require('http').createServer(app);

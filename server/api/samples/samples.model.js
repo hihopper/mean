@@ -3,7 +3,7 @@
 var mongoose = require('mongoose');
 
 var samplesSchema = mongoose.Schema({
-  key: String,
+  key: { type: String,  index: { unique: true }, require: true }, 
   value: String
 });
 

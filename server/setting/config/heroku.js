@@ -15,7 +15,7 @@ var config = {
   ip: process.env.IP || 'localhost',
 
   // seed DB
-  seedDB: false,
+  seedDB: true,
 
   mongo: {
     uri: 'mongodb://hopper:aaaa1111@ds047325.mongolab.com:47325/heroku_l85p17kb',

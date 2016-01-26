@@ -8,7 +8,8 @@ module.exports = function(app) {
   // Insert routes below
 //  app.use('/api/things', require('./api/thing'));
   app.use('/api/samples', require('./api/samples'));
-  
+
+
   app.get('/aa', function(req,res) {
     throw new Error('!!');
   });

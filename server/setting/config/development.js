@@ -36,6 +36,13 @@ var config = {
     use: process.env.SSL || false,
     key: 'server/setting/ssl/hihopper.pem',
     cert: 'server/setting/ssl/hihopper.crt'
+  },
+
+  log: {
+    logDir: 'server/logs',
+    filename:  'access',
+    maxsize: 5242880, // 5MB
+    maxFiles: 5
   }
 };
 

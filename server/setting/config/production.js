@@ -36,7 +36,15 @@ var config = {
     use: process.env.SSL || true,
     key: 'server/setting/ssl/hihopper.pem',
     cert: 'server/setting/ssl/hihopper.crt'
+  },
+
+  log: {
+    logDir: 'server/logs',
+    filename:  'access',
+    maxsize: 5242880, // 5MB
+    maxFiles: 5
   }
+
 };
 
 module.exports = config;
