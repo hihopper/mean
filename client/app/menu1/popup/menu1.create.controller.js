@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 angular.module('smsApp').controller('Menu1CreateCtrl', function($scope, SamplesAPI) {
 
@@ -9,6 +9,7 @@ angular.module('smsApp').controller('Menu1CreateCtrl', function($scope, SamplesA
     SamplesAPI.save({ key: $scope.sample.key,
                       value:$scope.sample.value
                     }, function(result){
+                      console.log(result);
                       $scope.$close();
                     }, function(err){
                       console.log(err);

@@ -1,10 +1,19 @@
 <div class="container">
   <div class="btn btn-primary" ng-click="create()">생성</div>
 
-  <div>총 개수: {{samples.count}}</div>
-  <div ng-if="samples.err">{{samples.err}}</div>
+  <div>총 개수: {{data.rows.length}}</div>
+  <select ng-model="data.limit" ng-change="search()">
+    <option>10</option><option>20</option><option>30</option><option>40</option><option>50</option>
+  </select>
+  <div ng-if="data.err">{{data.err}}</div>
   <table class="table">
-    <tr ng-repeat="row in samples.rows">
+    <tr>
+      <th>KEY</th>
+      <th>VALUE</th>
+      <th>수정</th>
+      <th>삭제</th>
+    </tr>
+    <tr ng-repeat="row in data.rows">
       <td>{{row.key}}</td>
       <td>{{row.value}}</td>
       <td>
@@ -16,4 +25,6 @@
       <td><a ng-click="destroy(row)" class="trash"><span class="glyphicon glyphicon-trash"></span></a></td>
     </tr>
   </table>
+  <div class="clearfix"></div>
+  <pagination class="pageination-sm" direction-links="true" max-size="data.maxSize" items-per-page="data.limit" total-items="data.total" ng-model="data.page" ng-change="search()"></pagination>
 </div>

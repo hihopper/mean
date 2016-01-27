@@ -7,14 +7,14 @@ angular.module('smsApp', [
   'ui.router',
   'ui.bootstrap'
 ])
-  .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise('/');
 
     $locationProvider.html5Mode(true);
   })
-  .run(function($rootScope) {
-    $rootScope.$on('$stateChangeStart', function(event, next) {
+//  .run(function($rootScope) {
+//    $rootScope.$on('$stateChangeStart', function(event, next) {
 
-    });
-  })
+//    });
+//  })
 ;

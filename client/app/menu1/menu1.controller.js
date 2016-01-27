@@ -3,14 +3,26 @@
 angular.module('smsApp')
   .controller('Menu1Ctrl', function ($scope, $modal, SamplesAPI) {
 
-    $scope.samples = {};
+    $scope.data = {
+      limit: 5,
+      maxSize: 10,
+      page: 1,
+      total: 0,
+      rows: [],
+      error: ''
+    };
 
-    SamplesAPI.get({page:1}, function(data) {
-      $scope.samples = data;
-    }, function(err) {
-      $scope.samples.err = err.statusText;
-      console.log(err);
-    });
+    $scope.search = function() {
+
+      SamplesAPI.get({ page: $scope.data.page, limit: $scope.data.limit }, function(result) {
+        $scope.data.rows = result.rows;
+        $scope.data.total = result.total;
+      }, function(err) {
+        $scope.data.error = err.statusText;
+        console.log(err);
+      });
+    };
+    $scope.search();
 
     $scope.create = function() {
       var modal = $modal.open({
@@ -32,11 +44,11 @@ angular.module('smsApp')
         controller: 'Menu1UpdateCtrl',
         resolve: { row: function() { return row; }}
       });
-      
+
       modal.result.then( function(res) {
-        console.log('succ');
+        console.log('succ:' + res);
       }, function(err) {
-        console.log('fail');
+        console.log('fail: ' + err);
       });
     };
 
@@ -48,9 +60,9 @@ angular.module('smsApp')
       });
 
       modal.result.then( function(res) {
-        console.log('succ');
+        console.log('succ:' + res);
       }, function(err) {
-        console.log('fail');
+        console.log('fail: ' + err);
       });
     };
 

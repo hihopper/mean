@@ -29,6 +29,15 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     jshint: {
+      client: {
+        options: {
+          jshintrc: 'client/.jshintrc'
+        },
+        src: [
+          'client/{app,components}/**/*.js',
+          '!client/{app,components}/**/*.spec.js'
+        ]
+      },
       server: {
         options: {
           jshintrc: 'server/.jshintrc'
@@ -133,7 +142,8 @@ module.exports = function(grunt) {
             'dist/*',
             '!dist/.git*',
             '!dist/.openshift',
-            '!dist/Procfile'
+            '!dist/Procfile',
+            '!dist/public/fonts'
           ]
         }]
       },
@@ -295,6 +305,13 @@ module.exports = function(grunt) {
             src: [
               'package.json',
               'server/**/*'
+            ]
+          }, {
+            expand: true,
+            cwd: 'client/bower_components/bootstrap-css-only/fonts',
+            dest: 'dist/public/fonts',
+            src: [
+              '*'
             ]
           }]
         },

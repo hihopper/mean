@@ -41,7 +41,7 @@ if(config.seedDB) {
     app.use('/api/seedDB', require('./setting/seed'));
 }
 
-var server = config.ssl.use ? server = require('https').createServer(require('./ssl'), app)
+var server = config.ssl.use ? server = require('https').createServer(require('./setting/ssl'), app)
                             : server = require('http').createServer(app);
 
 require('./setting/express.js')(app);

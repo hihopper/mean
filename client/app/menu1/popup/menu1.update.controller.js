@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 angular.module('smsApp').controller('Menu1UpdateCtrl', function($scope, SamplesAPI, row) {
 
@@ -8,7 +8,8 @@ angular.module('smsApp').controller('Menu1UpdateCtrl', function($scope, SamplesA
 
     SamplesAPI.update({ key: $scope.sample.key },
                       { value:$scope.sample.value },
-                      function(result) {
+                      function(res) {
+                        console.log('succ:' + res);
                         $scope.$close();
                       }, function(err) {
                         console.log(err);

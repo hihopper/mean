@@ -5,6 +5,26 @@ var _ = require('lodash');
 
 exports.index = function( req, res ) {
 
+  var query = {};//{ userId: req.user.userId };
+  var options = { select: '-_id key value',
+                  page: parseInt(req.query.page) || 1,
+                  limit: parseInt(req.query.limit) || 0/*, sortBy:{regDate: -1}*/
+                  };
+
+  Samples.paginate( query, options,
+                    function (err, result) {
+                      if(err) { return errorHandler(500, res, err); }
+                      if(!result.docs.length) { return errorHandler(404, res, 'Not Found'); }
+
+                      global.logger.info( 'total:' + result.total + ' page:' + result.page + ' rows:' + result.docs.length);
+
+                      return res.status(200).json({
+                        total: result.total,
+                        page: result.page,
+                        rows: result.docs
+                      });
+                    });
+/*
   Samples.find( function( err, rows ) {
     if( err || !rows ) {
       console.log( err );
@@ -23,6 +43,7 @@ exports.index = function( req, res ) {
       })
     });
   });
+*/
 };
 
 exports.create = function(req, res) {

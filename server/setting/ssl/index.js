@@ -2,7 +2,7 @@
 
 var path = require('path');
 var fs = require('fs');
-var config = require('../setting/config');
+var config = require('../config');
 
 var options = {
   key: fs.readFileSync(path.join(config.root, config.ssl.key)),

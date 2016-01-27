@@ -10,7 +10,7 @@ router.get('/',  function( req, res ) {
 
   global.logger.info('--------------- seed DB ---------------');
   Samples.find({}).remove( function(){
-    for(var i = 0; i < 30; ++i) {
+    for(var i = 0; i < 300; ++i) {
       Samples.create( {key: 'KEY_' + i, value: 'VALUE_' + i});
     }
   });
