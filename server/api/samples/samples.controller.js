@@ -8,8 +8,10 @@ exports.index = function( req, res ) {
   var query = {};//{ userId: req.user.userId };
   var options = { select: '-_id key value',
                   page: parseInt(req.query.page) || 1,
-                  limit: parseInt(req.query.limit) || 0/*, sortBy:{regDate: -1}*/
+                  limit: parseInt(req.query.limit) || 0,
+                  sort: {}
                   };
+  options.sort[(req.query.sort || 'key').toLowerCase()] = parseInt(req.query.order) || -1 ;
 
   Samples.paginate( query, options,
                     function (err, result) {
@@ -24,6 +26,14 @@ exports.index = function( req, res ) {
                         rows: result.docs
                       });
                     });
+                    /*
+                      var stop = new Date().getTime();
+                          while(new Date().getTime() < stop + 1000) {
+                              ;
+                          }
+                    */
+
+
 /*
   Samples.find( function( err, rows ) {
     if( err || !rows ) {

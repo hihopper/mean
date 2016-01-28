@@ -15,7 +15,7 @@ var config = {
   ip: process.env.IP || 'localhost',
 
   // seed DB
-  seedDB: false,
+  seedDB: true,
 
   mongo: {
     uri: 'mongodb://localhost/sms',

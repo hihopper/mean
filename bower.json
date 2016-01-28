@@ -13,6 +13,7 @@
     "lodash": "~2.4.1",
     "angular-socket-io": "~0.6.0",
     "angular-ui-router": "~0.2.15",
-    "bootstrap-css-only": "~3.3.5"
+    "bootstrap-css-only": "~3.3.5",
+    "angular-spinner": "~0.8.0"
   }
 }
