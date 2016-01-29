@@ -6,6 +6,14 @@ var _ = require('lodash');
 exports.index = function( req, res ) {
 
   var query = {};//{ userId: req.user.userId };
+  if( req.query.search && req.query.value ) {
+    if( req.query.search.toLowerCase() === 'key' ||
+        req.query.search.toLowerCase() === 'value' ) {
+      query[req.query.search.toLowerCase()] = new RegExp('^'+req.query.value, "i");
+      //  query = {value: /^VALUE_10/};
+    }
+  }
+
   var options = { select: '-_id key value',
                   page: parseInt(req.query.page) || 1,
                   limit: parseInt(req.query.limit) || 0,
@@ -28,10 +36,10 @@ exports.index = function( req, res ) {
                     });
                     /*
                       var stop = new Date().getTime();
-                          while(new Date().getTime() < stop + 1000) {
-                              ;
-                          }
-                    */
+                        while(new Date().getTime() < stop + 1000) {
+                            ;
+                        }
+                  */
 
 
 /*

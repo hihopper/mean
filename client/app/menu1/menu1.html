@@ -2,25 +2,49 @@
 
 <div class="container">
   <br>
-  <div class="pull-right">
-    <div class="btn btn-primary" ng-click="create()">생성</div>
-    &nbsp
-    <div class="btn-group" dropdown>
-      <button type="button" class="btn btn-warning">라인: {{data.limit}}</button>
-      <button type="button" class="btn btn-warning dropdown-toggle" dropdown-toggle>
-        <span class="caret"></span>
-        <span class="sr-only">Split button!</span>
-      </button>
-      <ul class="dropdown-menu" role="menu" id="menu1_line">
-        <li ng-click="lineLimit(10)"><a>10</a></li>
-        <li ng-click="lineLimit(20)"><a>20</a></li>
-        <li ng-click="lineLimit(30)"><a>30</a></li>
-        <li ng-click="lineLimit(40)"><a>40</a></li>
-        <li ng-click="lineLimit(50)"><a>50</a></li>
-      </ul>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="input-group">
+        <div class="input-group-btn">
+          <div class="btn-group" dropdown>
+            <button type="button" class="btn btn-info dropdown-toggle" dropdown-toggle>
+              {{data.search.field}}
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" id="menu1_line">
+              <li ng-click="data.search.field = 'KEY'"><a>KEY</a></li>
+              <li ng-click="searchField('VALUE')"><a>VALUE</a></li>
+            </ul>
+          </div>
+        </div><!-- /btn-group -->
+        <input type="text" class="form-control" ng-model="data.search.value">
+        <span class="input-group-btn"><button class="btn btn-info" type="button" ng-click="search()">검색</button></span>
+      </div><!-- /input-group -->
+    </div>
+    <div class="col-sm-6">
+      <div class="pull-right">
+        <div class="btn btn-primary" ng-click="create()">생성</div>
+        &nbsp
+        <div class="btn-group" dropdown>
+          <button type="button" class="btn btn-warning">라인: {{data.limit}}</button>
+          <button type="button" class="btn btn-warning dropdown-toggle" dropdown-toggle>
+            <span class="caret"></span>
+            <span class="sr-only">Split button!</span>
+          </button>
+          <ul class="dropdown-menu" role="menu" id="menu1_line">
+            <li ng-click="lineLimit(10)"><a>10</a></li>
+            <li ng-click="lineLimit(20)"><a>20</a></li>
+            <li ng-click="lineLimit(30)"><a>30</a></li>
+            <li ng-click="lineLimit(40)"><a>40</a></li>
+            <li ng-click="lineLimit(50)"><a>50</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-  <br><br><br>
+
+
+  <br>
   <div class="alert alert-warning" ng-if="data.err">{{data.err}}</div>
   <table class="table table-striped table-condensed">
     <tr>
