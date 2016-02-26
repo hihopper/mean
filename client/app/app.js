@@ -6,7 +6,7 @@ angular.module('smsApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'angularSpinner'
+  'angularSpinner',
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise('/');
