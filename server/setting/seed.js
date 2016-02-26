@@ -1,6 +1,6 @@
 'use strict'
 
-var Samples = require('../api/samples/samples.model');
+var Samples = require('../api/sample/sample.model');
 
 
 var express = require('express');

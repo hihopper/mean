@@ -138,12 +138,12 @@ module.exports = function(grunt) {
         files: [{
           dot: true,
           src: [
+            'server/logs/*',
             '.tmp',
             'dist/*',
             '!dist/.git*',
             '!dist/.openshift',
-            '!dist/Procfile',
-            '!dist/public/fonts'
+            '!dist/Procfile'
           ]
         }]
       },

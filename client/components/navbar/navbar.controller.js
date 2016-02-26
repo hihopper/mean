@@ -5,7 +5,9 @@ angular.module('smsApp')
     $scope.isCollapsed = true;
 
     $scope.isActive = function(menu) {
-      return $state.includes(menu);
+      //console.log(menu + ' ' + $state.$current.name);
+      return $state.$current.name.indexOf(menu) > -1;
+//      return $state.includes(menu);
     };
 
     $scope.menuClick = function() {

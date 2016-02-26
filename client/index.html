@@ -18,9 +18,12 @@
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
       <!-- injector:css -->
+      <link rel="stylesheet" href="app/admin/admin.css">
       <link rel="stylesheet" href="app/app.css">
       <link rel="stylesheet" href="app/home/home.css">
       <link rel="stylesheet" href="app/menu1/menu1.css">
+      <link rel="stylesheet" href="app/menu2/menu2.1/menu2.1.css">
+      <link rel="stylesheet" href="app/menu2/menu2.2/menu2.2.css">
       <link rel="stylesheet" href="components/footer/footer.css">
       <!-- endinjector -->
     <!-- endbuild -->
@@ -33,7 +36,8 @@
     <!-- Add your site or application content here -->
     <div ng-include="'components/navbar/navbar.html'"></div>
     <div class="body">
-    <div ui-view></div></div>
+      <div ui-view></div>
+    </div>
     <div ng-include="'components/footer/footer.html'"></div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
@@ -70,6 +74,12 @@
 
         <script src="app/app.js"></script>
           <!-- injector:js -->
+          <script src="app/admin/admin.controller.js"></script>
+          <script src="app/admin/admin.factory.js"></script>
+          <script src="app/admin/admin.js"></script>
+          <script src="app/admin/popup/user.create.controller.js"></script>
+          <script src="app/admin/popup/user.destroy.controller.js"></script>
+          <script src="app/admin/popup/user.update.controller.js"></script>
           <script src="app/home/home.controller.js"></script>
           <script src="app/home/home.js"></script>
           <script src="app/menu1/menu1.controller.js"></script>
@@ -78,8 +88,11 @@
           <script src="app/menu1/popup/menu1.create.controller.js"></script>
           <script src="app/menu1/popup/menu1.destroy.controller.js"></script>
           <script src="app/menu1/popup/menu1.update.controller.js"></script>
-          <script src="app/menu2/menu2.controller.js"></script>
-          <script src="app/menu2/menu2.js"></script>
+          <script src="app/menu2/menu2.1/menu2.1.controller.js"></script>
+          <script src="app/menu2/menu2.1/menu2.1.js"></script>
+          <script src="app/menu2/menu2.2/menu2.2.controller.js"></script>
+          <script src="app/menu2/menu2.2/menu2.2.js"></script>
+          <script src="app/menu2/sidebar.controller.js"></script>
           <script src="components/navbar/navbar.controller.js"></script>
           <!-- endinjector -->
         <!-- endbuild -->

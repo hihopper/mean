@@ -6,8 +6,8 @@ var path = require('path');
 module.exports = function(app) {
 
   // Insert routes below
-//  app.use('/api/things', require('./api/thing'));
-  app.use('/api/samples', require('./api/samples'));
+  app.use('/api/samples', require('./api/sample'));
+  app.use('/api/users', require('./api/user'));
 
 
   app.get('/aa', function(req,res) {
@@ -28,12 +28,4 @@ module.exports = function(app) {
     .get(function(req, res) {
       res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
     });
-
-  app.use( function( err, req, res, next) {
-    console.error('500 Error');
-    console.error(err.stack);
-
-    res.status(500);
-    res.send('500 - server error');
-  }); // Error handler - has to be last
 };

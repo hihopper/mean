@@ -1,15 +1,18 @@
 'use strict';
 
-angular.module('smsApp').controller('Menu1Ctrl', function ($scope, $modal, SamplesAPI, usSpinnerService, $window) {
+angular.module('smsApp').controller('AdminCtrl', function ($scope, $modal, UserAPI, usSpinnerService, $window) {
 
   $scope.searches = [
-    { key: 'key'    , text: 'KEY' },
-    { key: 'value'  , text: 'VALUE' }
+    { key: 'userId' , text: '사용자ID' },
+    { key: 'name'   , text: '이름' },
+    { key: 'role'   , text: '등급' }
   ];
 
   $scope.sorts = [
-    { key: 'key'    , text: 'KEY'   , col: 'col-xs-5' },
-    { key: 'value'  , text: 'VALUE' , col: 'col-xs-5' },
+    { key: 'userId' , text: '사용자ID', col: 'col-xs-3'},
+    { key: 'name'   , text: '이름'    , col: 'col-xs-3' },
+    { key: 'role'   , text: '등급'    , col: 'col-xs-2' },
+    { key: 'regDate', text: '가입일'  , col: 'col-xs-2' }
   ];
 
   $scope.data = {
@@ -22,6 +25,7 @@ angular.module('smsApp').controller('Menu1Ctrl', function ($scope, $modal, Sampl
     rows: [],
     sort: {
       field: $scope.sorts[0].key,
+      fieldName: '',
       order: 1,
       ngclass: {}
     },
@@ -39,12 +43,8 @@ angular.module('smsApp').controller('Menu1Ctrl', function ($scope, $modal, Sampl
     $scope.data.maxSize = value < 500 ? 5 : 10;
   });
 
-  $scope.searchField = function(field) {
-    $scope.data.search.field = field;
-  };
-
   $scope.search = function() {
-
+    //usSpinnerService.spin('spinner-main');
     var query = {
       search: $scope.data.search.key,
       value: $scope.data.searchValue,
@@ -54,8 +54,7 @@ angular.module('smsApp').controller('Menu1Ctrl', function ($scope, $modal, Sampl
       order: $scope.data.sort.order
     };
 
-    usSpinnerService.spin('spinner-main');
-    SamplesAPI.get(query, function(result) {
+    UserAPI.get(query, function(result) {
       $scope.data.rows = result.rows;
       $scope.data.total = result.total;
     }, function(err) {
@@ -64,7 +63,7 @@ angular.module('smsApp').controller('Menu1Ctrl', function ($scope, $modal, Sampl
       $scope.data.total = 0;
       console.log(err);
     }).$promise.finally( function() {
-      usSpinnerService.stop('spinner-main');
+      //usSpinnerService.stop('spinner-main');
     });
   };
 
@@ -84,8 +83,8 @@ angular.module('smsApp').controller('Menu1Ctrl', function ($scope, $modal, Sampl
 
   $scope.create = function() {
     var modal = $modal.open({
-      templateUrl: 'app/menu1/popup/menu1.create.html',
-      controller: 'Menu1CreateCtrl'
+      templateUrl: 'app/admin/popup/user.create.html',
+      controller: 'UserCreateCtrl'
     });
 
     modal.result.then
@@ -98,8 +97,8 @@ angular.module('smsApp').controller('Menu1Ctrl', function ($scope, $modal, Sampl
 
   $scope.update = function(row) {
     var modal = $modal.open({
-      templateUrl: 'app/menu1/popup/menu1.update.html',
-      controller: 'Menu1UpdateCtrl',
+      templateUrl: 'app/admin/popup/user.update.html',
+      controller: 'UserUpdateCtrl',
       resolve: { row: function() { return row; }}
     });
 
@@ -112,8 +111,8 @@ angular.module('smsApp').controller('Menu1Ctrl', function ($scope, $modal, Sampl
 
   $scope.destroy = function(row) {
     var modal = $modal.open({
-      templateUrl: 'app/menu1/popup/menu1.destroy.html',
-      controller: 'Menu1DestroyCtrl',
+      templateUrl: 'app/admin/popup/user.destroy.html',
+      controller: 'UserDestroyCtrl',
       resolve: { row: function() { return row; }}
     });
 

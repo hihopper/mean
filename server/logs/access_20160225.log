@@ -1,0 +1,886 @@
+2016/02/25 10:09:24.846 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.769 ms
+
+2016/02/25 10:09:25.162 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=KEY&sort=KEY&value= HTTP/1.1 304 - - 7.371 ms
+
+2016/02/25 10:09:30.680 - info: Create user:  key=ssss, value=dddd
+2016/02/25 10:09:30.683 - warn:  MongoError: E11000 duplicate key error collection: sms-dev.users index: userId_1 dup key: { : null }
+    at Function.MongoError.create (D:\Project\2016\SPA\mean\node_modules\mongodb-core\lib\error.js:31:11)
+    at toError (D:\Project\2016\SPA\mean\node_modules\mongodb\lib\utils.js:114:22)
+    at D:\Project\2016\SPA\mean\node_modules\mongodb\lib\collection.js:597:23
+    at handleCallback (D:\Project\2016\SPA\mean\node_modules\mongodb\lib\utils.js:96:12)
+    at D:\Project\2016\SPA\mean\node_modules\mongodb\lib\bulk\unordered.js:470:9
+    at handleCallback (D:\Project\2016\SPA\mean\node_modules\mongodb\lib\utils.js:96:12)
+    at resultHandler (D:\Project\2016\SPA\mean\node_modules\mongodb\lib\bulk\unordered.js:417:5)
+    at D:\Project\2016\SPA\mean\node_modules\mongodb-core\lib\topologies\server.js:780:13
+    at Callbacks.emit (D:\Project\2016\SPA\mean\node_modules\mongodb-core\lib\topologies\server.js:95:3)
+    at null.messageHandler (D:\Project\2016\SPA\mean\node_modules\mongodb-core\lib\topologies\server.js:249:23)
+    at Socket.<anonymous> (D:\Project\2016\SPA\mean\node_modules\mongodb-core\lib\connection\connection.js:265:22)
+    at emitOne (events.js:77:13)
+    at Socket.emit (events.js:169:7)
+    at readableAddChunk (_stream_readable.js:146:16)
+    at Socket.Readable.push (_stream_readable.js:110:10)
+    at TCP.onread (net.js:523:20)
+2016/02/25 10:09:30.686 - info: ::1 - POST /api/users HTTP/1.1 500 21 - 5.507 ms
+
+2016/02/25 10:09:46.288 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.814 ms
+
+2016/02/25 10:09:46.594 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=KEY&sort=KEY&value= HTTP/1.1 304 - - 7.090 ms
+
+2016/02/25 10:09:46.735 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.323 ms
+
+2016/02/25 10:09:47.064 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=KEY&sort=KEY&value= HTTP/1.1 304 - - 3.406 ms
+
+2016/02/25 10:09:51.294 - info: Create user:  key=ssfdsf, value=sdfsdf
+2016/02/25 10:09:51.295 - warn:  MongoError: E11000 duplicate key error collection: sms-dev.users index: userId_1 dup key: { : null }
+    at Function.MongoError.create (D:\Project\2016\SPA\mean\node_modules\mongodb-core\lib\error.js:31:11)
+    at toError (D:\Project\2016\SPA\mean\node_modules\mongodb\lib\utils.js:114:22)
+    at D:\Project\2016\SPA\mean\node_modules\mongodb\lib\collection.js:597:23
+    at handleCallback (D:\Project\2016\SPA\mean\node_modules\mongodb\lib\utils.js:96:12)
+    at D:\Project\2016\SPA\mean\node_modules\mongodb\lib\bulk\unordered.js:470:9
+    at handleCallback (D:\Project\2016\SPA\mean\node_modules\mongodb\lib\utils.js:96:12)
+    at resultHandler (D:\Project\2016\SPA\mean\node_modules\mongodb\lib\bulk\unordered.js:417:5)
+    at D:\Project\2016\SPA\mean\node_modules\mongodb-core\lib\topologies\server.js:780:13
+    at Callbacks.emit (D:\Project\2016\SPA\mean\node_modules\mongodb-core\lib\topologies\server.js:95:3)
+    at null.messageHandler (D:\Project\2016\SPA\mean\node_modules\mongodb-core\lib\topologies\server.js:249:23)
+    at Socket.<anonymous> (D:\Project\2016\SPA\mean\node_modules\mongodb-core\lib\connection\connection.js:265:22)
+    at emitOne (events.js:77:13)
+    at Socket.emit (events.js:169:7)
+    at readableAddChunk (_stream_readable.js:146:16)
+    at Socket.Readable.push (_stream_readable.js:110:10)
+    at TCP.onread (net.js:523:20)
+2016/02/25 10:09:51.296 - info: ::1 - POST /api/users HTTP/1.1 500 21 - 2.250 ms
+
+2016/02/25 10:10:49.040 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.614 ms
+
+2016/02/25 10:10:49.886 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=KEY&sort=KEY&value= HTTP/1.1 304 - - 3.473 ms
+
+2016/02/25 10:10:53.006 - info: Create user:  userId=ertert, name=ertert
+2016/02/25 10:10:53.010 - info: ::1 - POST /api/users HTTP/1.1 201 90 - 3.686 ms
+
+2016/02/25 10:10:59.469 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.552 ms
+
+2016/02/25 10:10:59.859 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=KEY&sort=KEY&value= HTTP/1.1 200 95 - 7.896 ms
+
+2016/02/25 10:12:43.455 - info: ::1 - DELETE /api/samples HTTP/1.1 404 27 - 1.364 ms
+
+2016/02/25 10:12:45.662 - info: ::1 - DELETE /api/samples HTTP/1.1 404 27 - 0.367 ms
+
+2016/02/25 10:14:48.654 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.136 ms
+
+2016/02/25 10:14:48.966 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=KEY&sort=KEY&value= HTTP/1.1 304 - - 3.633 ms
+
+2016/02/25 10:14:53.162 - info: ::1 - DELETE /api/samples HTTP/1.1 404 27 - 0.294 ms
+
+2016/02/25 10:14:56.360 - info: ::1 - DELETE /api/samples HTTP/1.1 404 27 - 0.218 ms
+
+2016/02/25 10:15:04.090 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.659 ms
+
+2016/02/25 10:15:04.428 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=KEY&sort=KEY&value= HTTP/1.1 304 - - 4.455 ms
+
+2016/02/25 10:15:06.172 - info: ::1 - DELETE /api/samples HTTP/1.1 404 27 - 0.315 ms
+
+2016/02/25 10:15:25.601 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.381 ms
+
+2016/02/25 10:15:25.942 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=KEY&sort=KEY&value= HTTP/1.1 304 - - 7.063 ms
+
+2016/02/25 10:15:27.879 - info: ::1 - DELETE /api/samples HTTP/1.1 404 27 - 0.273 ms
+
+2016/02/25 10:16:18.085 - info: MongoDB connected!
+2016/02/25 10:16:18.205 - info: ::1 - GET /admin HTTP/1.1 200 5038 - 7.036 ms
+
+2016/02/25 10:16:18.499 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=KEY&sort=KEY&value= HTTP/1.1 304 - - 24.208 ms
+
+2016/02/25 10:16:23.606 - info: ::1 - DELETE /api/samples HTTP/1.1 404 27 - 0.980 ms
+
+2016/02/25 10:18:45.446 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.141 ms
+
+2016/02/25 10:18:45.745 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=KEY&sort=KEY&value= HTTP/1.1 304 - - 5.737 ms
+
+2016/02/25 10:18:46.959 - info: ::1 - GET /app/user/popup/user.destroy.html HTTP/1.1 404 96 - 5.110 ms
+
+2016/02/25 10:18:58.561 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.586 ms
+
+2016/02/25 10:18:58.861 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=KEY&sort=KEY&value= HTTP/1.1 304 - - 4.227 ms
+
+2016/02/25 10:18:59.416 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.582 ms
+
+2016/02/25 10:18:59.681 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=KEY&sort=KEY&value= HTTP/1.1 304 - - 3.487 ms
+
+2016/02/25 10:19:00.934 - info: ::1 - GET /app/user/popup/user.destroy.html HTTP/1.1 404 96 - 2.211 ms
+
+2016/02/25 10:19:25.009 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.732 ms
+
+2016/02/25 10:19:25.290 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=KEY&sort=KEY&value= HTTP/1.1 304 - - 3.118 ms
+
+2016/02/25 10:19:27.561 - info: ::1 - DELETE /api/users HTTP/1.1 404 25 - 0.531 ms
+
+2016/02/25 10:21:28.698 - info: MongoDB connected!
+2016/02/25 10:21:29.379 - info: ::1 - GET /admin HTTP/1.1 200 5038 - 7.844 ms
+
+2016/02/25 10:21:29.667 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=KEY&sort=KEY&value= HTTP/1.1 304 - - 22.531 ms
+
+2016/02/25 10:21:36.633 - info: Delete user: userId= undefined
+2016/02/25 10:21:36.640 - info: ::1 - DELETE /api/users/ertert HTTP/1.1 204 - - 6.557 ms
+
+2016/02/25 10:36:17.545 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.169 ms
+
+2016/02/25 10:36:17.896 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=KEY&sort=KEY&value= HTTP/1.1 200 79 - 4.501 ms
+
+2016/02/25 10:37:48.062 - info: MongoDB connected!
+2016/02/25 10:37:52.378 - info: MongoDB connected!
+2016/02/25 10:37:56.076 - info: ::1 - GET /admin HTTP/1.1 304 - - 9.784 ms
+
+2016/02/25 10:37:56.415 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=KEY&sort=KEY&value= HTTP/1.1 304 - - 22.085 ms
+
+2016/02/25 10:37:58.459 - info: Delete user: userId= undefined
+2016/02/25 10:37:58.460 - warn: Not Found
+2016/02/25 10:37:58.462 - info: ::1 - DELETE /api/users/ertert HTTP/1.1 404 9 - 1.876 ms
+
+2016/02/25 10:38:46.387 - info: MongoDB connected!
+2016/02/25 10:38:49.634 - info: ::1 - GET /admin HTTP/1.1 304 - - 4.630 ms
+
+2016/02/25 10:38:49.940 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=KEY&sort=KEY&value= HTTP/1.1 304 - - 24.392 ms
+
+2016/02/25 10:38:54.901 - info: Delete user: userId= ertert
+2016/02/25 10:38:54.908 - info: ::1 - DELETE /api/users/ertert HTTP/1.1 204 - - 6.893 ms
+
+2016/02/25 10:39:22.838 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.881 ms
+
+2016/02/25 10:39:23.197 - warn: Not Found
+2016/02/25 10:39:23.199 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=KEY&sort=KEY&value= HTTP/1.1 404 9 - 3.548 ms
+
+2016/02/25 11:07:17.072 - info: MongoDB connected!
+2016/02/25 11:07:19.768 - info: MongoDB connected!
+2016/02/25 11:24:40.241 - info: ::1 - GET /admin HTTP/1.1 304 - - 5.564 ms
+
+2016/02/25 11:24:40.603 - warn: Not Found
+2016/02/25 11:24:40.606 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=USER_ID&sort=USER_ID&value= HTTP/1.1 404 9 - 14.876 ms
+
+2016/02/25 11:25:25.800 - info: MongoDB connected!
+2016/02/25 11:25:32.042 - info: MongoDB connected!
+2016/02/25 11:25:39.485 - info: ::1 - GET /admin HTTP/1.1 304 - - 5.744 ms
+
+2016/02/25 11:25:39.821 - warn: Not Found
+2016/02/25 11:25:39.824 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=USER_ID&sort=USER_ID&value= HTTP/1.1 404 9 - 15.250 ms
+
+2016/02/25 11:25:46.713 - info: Create user:  userId=AAAA, name=1111
+2016/02/25 11:25:46.728 - info: ::1 - POST /api/users HTTP/1.1 201 157 - 14.272 ms
+
+2016/02/25 11:25:48.405 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.996 ms
+
+2016/02/25 11:25:48.742 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=USER_ID&sort=USER_ID&value= HTTP/1.1 200 146 - 9.247 ms
+
+2016/02/25 11:40:41.191 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.722 ms
+
+2016/02/25 11:40:41.537 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=USER_ID&sort=USER_ID&value= HTTP/1.1 304 - - 6.171 ms
+
+2016/02/25 11:40:53.777 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.991 ms
+
+2016/02/25 11:40:54.134 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=USER_ID&sort=USER_ID&value= HTTP/1.1 304 - - 6.073 ms
+
+2016/02/25 11:42:42.554 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.754 ms
+
+2016/02/25 11:42:42.860 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=USER_ID&sort=USER_ID&value= HTTP/1.1 304 - - 4.350 ms
+
+2016/02/25 11:42:51.409 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=USER_ID&sort=NAME&value= HTTP/1.1 200 146 - 19.979 ms
+
+2016/02/25 11:42:52.933 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=USER_ID&sort=USER_ID&value= HTTP/1.1 304 - - 8.016 ms
+
+2016/02/25 11:43:44.691 - info: MongoDB connected!
+2016/02/25 11:43:50.099 - info: ::1 - GET /admin HTTP/1.1 304 - - 6.009 ms
+
+2016/02/25 11:43:50.453 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=USER_ID&sort=USER_ID&value= HTTP/1.1 200 112 - 24.319 ms
+
+2016/02/25 11:43:52.712 - info: Delete user: userId= AAAA
+2016/02/25 11:43:52.720 - info: ::1 - DELETE /api/users/AAAA HTTP/1.1 204 - - 7.968 ms
+
+2016/02/25 11:43:53.694 - info: ::1 - GET /admin HTTP/1.1 304 - - 2.096 ms
+
+2016/02/25 11:43:54.042 - warn: Not Found
+2016/02/25 11:43:54.043 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=USER_ID&sort=USER_ID&value= HTTP/1.1 404 9 - 2.710 ms
+
+2016/02/25 11:43:57.444 - info: Create user:  userId=SSSS, name=dddd
+2016/02/25 11:43:57.459 - info: ::1 - POST /api/users HTTP/1.1 201 123 - 13.411 ms
+
+2016/02/25 11:43:59.381 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.335 ms
+
+2016/02/25 11:43:59.705 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=USER_ID&sort=USER_ID&value= HTTP/1.1 200 112 - 10.820 ms
+
+2016/02/25 11:44:28.771 - info: Create user:  userId=sfsfsdf, name=22222
+2016/02/25 11:44:28.777 - info: ::1 - POST /api/users HTTP/1.1 201 127 - 3.833 ms
+
+2016/02/25 11:44:29.900 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.536 ms
+
+2016/02/25 11:44:30.271 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=USER_ID&sort=USER_ID&value= HTTP/1.1 200 199 - 3.336 ms
+
+2016/02/25 11:44:32.978 - info: ::1 - GET /api/users?limit=10&order=1&page=1&search=USER_ID&sort=USER_ID&value= HTTP/1.1 200 199 - 8.837 ms
+
+2016/02/25 11:44:35.161 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=USER_ID&sort=USER_ID&value= HTTP/1.1 304 - - 7.249 ms
+
+2016/02/25 11:44:36.535 - info: ::1 - GET /api/users?limit=10&order=1&page=1&search=USER_ID&sort=USER_ID&value= HTTP/1.1 304 - - 3.989 ms
+
+2016/02/25 11:44:49.420 - info: MongoDB connected!
+2016/02/25 11:46:15.406 - info: MongoDB connected!
+2016/02/25 11:46:18.122 - info: MongoDB connected!
+2016/02/25 11:46:36.787 - info: MongoDB connected!
+2016/02/25 11:47:10.256 - info: MongoDB connected!
+2016/02/25 11:47:16.804 - info: MongoDB connected!
+2016/02/25 11:47:34.329 - info: MongoDB connected!
+2016/02/25 11:48:31.801 - info: ::1 - GET /admin HTTP/1.1 304 - - 5.910 ms
+
+2016/02/25 11:48:32.150 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 200 199 - 25.313 ms
+
+2016/02/25 11:48:34.247 - info: ::1 - GET /api/users?limit=10&order=1&page=1&search=userId&sort=userId&value= HTTP/1.1 200 199 - 8.180 ms
+
+2016/02/25 11:48:35.068 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 5.793 ms
+
+2016/02/25 11:48:53.705 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.845 ms
+
+2016/02/25 11:48:54.023 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 3.691 ms
+
+2016/02/25 11:49:04.405 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.631 ms
+
+2016/02/25 11:49:04.739 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 13.338 ms
+
+2016/02/25 11:49:05.697 - info: ::1 - GET /api/users?limit=10&order=1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 6.252 ms
+
+2016/02/25 11:49:06.492 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 10.002 ms
+
+2016/02/25 11:49:22.771 - info: MongoDB connected!
+2016/02/25 11:49:24.891 - info: MongoDB connected!
+2016/02/25 11:50:00.843 - info: MongoDB connected!
+2016/02/25 11:50:04.656 - info: MongoDB connected!
+2016/02/25 11:50:05.147 - info: ::1 - GET /admin HTTP/1.1 304 - - 5.750 ms
+
+2016/02/25 11:50:05.534 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 44.914 ms
+
+2016/02/25 11:50:06.355 - info: ::1 - GET /api/users?limit=10&order=1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 7.623 ms
+
+2016/02/25 11:50:32.080 - info: MongoDB connected!
+2016/02/25 11:50:34.223 - info: ::1 - GET /admin HTTP/1.1 304 - - 4.408 ms
+
+2016/02/25 11:50:34.592 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 200 199 - 23.453 ms
+
+2016/02/25 11:50:35.757 - info: ::1 - GET /api/users?limit=10&order=1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 8.972 ms
+
+2016/02/25 11:50:36.505 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 5.779 ms
+
+2016/02/25 11:50:37.128 - info: ::1 - GET /api/users?limit=10&order=1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 4.696 ms
+
+2016/02/25 11:50:37.934 - info: ::1 - GET /api/users?limit=10&order=1&page=1&search=userId&sort=name&value= HTTP/1.1 200 199 - 9.857 ms
+
+2016/02/25 11:50:38.731 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=name&value= HTTP/1.1 200 199 - 5.975 ms
+
+2016/02/25 11:50:39.698 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=role&value= HTTP/1.1 200 199 - 8.527 ms
+
+2016/02/25 11:50:40.283 - info: ::1 - GET /api/users?limit=10&order=1&page=1&search=userId&sort=role&value= HTTP/1.1 200 199 - 7.180 ms
+
+2016/02/25 11:50:40.940 - info: ::1 - GET /api/users?limit=10&order=1&page=1&search=userId&sort=regDate&value= HTTP/1.1 200 199 - 8.001 ms
+
+2016/02/25 11:50:41.644 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=regDate&value= HTTP/1.1 200 199 - 7.050 ms
+
+2016/02/25 11:50:42.444 - info: ::1 - GET /api/users?limit=10&order=1&page=1&search=userId&sort=regDate&value= HTTP/1.1 304 - - 7.207 ms
+
+2016/02/25 11:50:43.207 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=regDate&value= HTTP/1.1 304 - - 5.577 ms
+
+2016/02/25 11:50:43.842 - info: ::1 - GET /api/users?limit=10&order=1&page=1&search=userId&sort=regDate&value= HTTP/1.1 304 - - 5.132 ms
+
+2016/02/25 11:51:47.182 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.120 ms
+
+2016/02/25 11:51:47.535 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 6.441 ms
+
+2016/02/25 11:52:13.829 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.161 ms
+
+2016/02/25 11:52:14.182 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 3.863 ms
+
+2016/02/25 11:52:53.508 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.620 ms
+
+2016/02/25 11:52:53.853 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 6.119 ms
+
+2016/02/25 11:53:07.291 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.836 ms
+
+2016/02/25 11:53:07.639 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 9.269 ms
+
+2016/02/25 11:53:23.144 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.003 ms
+
+2016/02/25 11:53:23.477 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 5.160 ms
+
+2016/02/25 11:53:50.599 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.615 ms
+
+2016/02/25 11:53:50.937 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 3.417 ms
+
+2016/02/25 11:53:56.420 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.487 ms
+
+2016/02/25 11:53:56.731 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 7.182 ms
+
+2016/02/25 11:55:09.892 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.422 ms
+
+2016/02/25 11:55:10.202 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 7.927 ms
+
+2016/02/25 11:55:25.346 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.082 ms
+
+2016/02/25 11:55:25.650 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 5.738 ms
+
+2016/02/25 11:55:28.404 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.016 ms
+
+2016/02/25 11:55:28.732 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 5.241 ms
+
+2016/02/25 11:55:51.244 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.468 ms
+
+2016/02/25 11:55:51.588 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 5.374 ms
+
+2016/02/25 13:41:51.538 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.883 ms
+
+2016/02/25 13:41:51.875 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 4.113 ms
+
+2016/02/25 13:43:35.922 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.514 ms
+
+2016/02/25 13:43:36.247 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 3.769 ms
+
+2016/02/25 13:43:41.331 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.695 ms
+
+2016/02/25 13:43:41.628 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 3.330 ms
+
+2016/02/25 13:43:42.883 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.693 ms
+
+2016/02/25 13:43:43.172 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 3.196 ms
+
+2016/02/25 13:43:49.035 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.888 ms
+
+2016/02/25 13:43:49.324 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 3.178 ms
+
+2016/02/25 13:44:09.975 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.578 ms
+
+2016/02/25 13:44:10.285 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 3.428 ms
+
+2016/02/25 14:26:53.140 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.518 ms
+
+2016/02/25 14:26:53.460 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&sort=userId HTTP/1.1 200 199 - 3.114 ms
+
+2016/02/25 14:27:33.605 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.384 ms
+
+2016/02/25 14:27:33.903 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&sort=userId HTTP/1.1 304 - - 3.074 ms
+
+2016/02/25 14:27:59.856 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.790 ms
+
+2016/02/25 14:28:00.138 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&sort=userId HTTP/1.1 304 - - 7.512 ms
+
+2016/02/25 14:28:11.501 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.632 ms
+
+2016/02/25 14:28:11.789 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&sort=userId HTTP/1.1 304 - - 3.435 ms
+
+2016/02/25 14:28:25.831 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.709 ms
+
+2016/02/25 14:28:26.154 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&sort=userId HTTP/1.1 304 - - 3.229 ms
+
+2016/02/25 14:29:05.491 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.023 ms
+
+2016/02/25 14:29:05.810 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&sort=userId HTTP/1.1 304 - - 20.844 ms
+
+2016/02/25 14:29:58.104 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.968 ms
+
+2016/02/25 14:29:58.422 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&sort=userId HTTP/1.1 304 - - 4.943 ms
+
+2016/02/25 14:30:49.708 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.068 ms
+
+2016/02/25 14:30:50.033 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&sort=userId HTTP/1.1 304 - - 3.287 ms
+
+2016/02/25 14:31:23.724 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.158 ms
+
+2016/02/25 14:31:24.023 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&sort=userId HTTP/1.1 304 - - 4.900 ms
+
+2016/02/25 14:32:23.524 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.770 ms
+
+2016/02/25 14:32:23.808 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&sort=userId HTTP/1.1 304 - - 2.800 ms
+
+2016/02/25 14:38:38.343 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.852 ms
+
+2016/02/25 14:38:38.652 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&sort=userId HTTP/1.1 304 - - 6.537 ms
+
+2016/02/25 14:39:06.540 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.442 ms
+
+2016/02/25 14:39:06.796 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&sort=userId HTTP/1.1 304 - - 3.176 ms
+
+2016/02/25 14:39:13.899 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.503 ms
+
+2016/02/25 14:39:14.192 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&sort=userId HTTP/1.1 304 - - 2.920 ms
+
+2016/02/25 14:40:31.519 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.035 ms
+
+2016/02/25 14:40:31.813 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&sort=userId HTTP/1.1 304 - - 14.515 ms
+
+2016/02/25 14:48:24.290 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&sort=userId HTTP/1.1 304 - - 5.895 ms
+
+2016/02/25 14:48:26.128 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&sort=userId&value=ddd HTTP/1.1 200 199 - 4.468 ms
+
+2016/02/25 14:48:27.183 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&sort=userId&value=ddd HTTP/1.1 304 - - 4.366 ms
+
+2016/02/25 14:51:32.065 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.521 ms
+
+2016/02/25 14:51:32.388 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 3.829 ms
+
+2016/02/25 14:51:59.842 - info: ::1 - GET /admin HTTP/1.1 304 - - 2.668 ms
+
+2016/02/25 14:52:00.144 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 5.516 ms
+
+2016/02/25 14:53:09.520 - info: ::1 - GET /admin HTTP/1.1 304 - - 3.615 ms
+
+2016/02/25 14:53:09.804 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 4.412 ms
+
+2016/02/25 14:53:20.621 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.568 ms
+
+2016/02/25 14:53:20.911 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 3.384 ms
+
+2016/02/25 14:54:35.228 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.465 ms
+
+2016/02/25 14:54:35.533 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 3.689 ms
+
+2016/02/25 14:54:52.877 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.318 ms
+
+2016/02/25 14:54:53.159 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 8.964 ms
+
+2016/02/25 14:54:59.663 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.765 ms
+
+2016/02/25 14:54:59.956 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 2.973 ms
+
+2016/02/25 14:55:15.257 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.373 ms
+
+2016/02/25 14:55:15.512 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 2.644 ms
+
+2016/02/25 14:55:27.383 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.056 ms
+
+2016/02/25 14:55:27.666 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 2.500 ms
+
+2016/02/25 14:55:32.243 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=name&sort=userId&value= HTTP/1.1 200 199 - 11.912 ms
+
+2016/02/25 14:55:35.738 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=name&sort=userId&value= HTTP/1.1 304 - - 3.781 ms
+
+2016/02/25 14:55:52.110 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.632 ms
+
+2016/02/25 14:55:52.426 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 2.518 ms
+
+2016/02/25 14:55:53.105 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 4.402 ms
+
+2016/02/25 14:55:54.856 - warn: Not Found
+2016/02/25 14:55:54.860 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value=eee HTTP/1.1 404 9 - 9.454 ms
+
+2016/02/25 14:56:12.479 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 5.700 ms
+
+2016/02/25 14:56:17.381 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value=s HTTP/1.1 200 199 - 4.307 ms
+
+2016/02/25 14:56:20.804 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value=ss HTTP/1.1 200 112 - 3.010 ms
+
+2016/02/25 14:56:23.983 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value=sf HTTP/1.1 200 116 - 5.504 ms
+
+2016/02/25 14:56:30.806 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 6.297 ms
+
+2016/02/25 14:56:33.840 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=name&sort=userId&value=22 HTTP/1.1 200 116 - 12.361 ms
+
+2016/02/25 14:56:35.675 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=name&sort=userId&value=dd HTTP/1.1 200 112 - 3.163 ms
+
+2016/02/25 14:56:41.684 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=role&sort=userId&value=u HTTP/1.1 200 199 - 3.987 ms
+
+2016/02/25 15:04:30.190 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.114 ms
+
+2016/02/25 15:04:30.462 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 4.279 ms
+
+2016/02/25 15:04:48.689 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.972 ms
+
+2016/02/25 15:04:48.985 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 3.134 ms
+
+2016/02/25 15:07:53.365 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.366 ms
+
+2016/02/25 15:07:53.658 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 3.225 ms
+
+2016/02/25 15:07:55.455 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=name&value= HTTP/1.1 200 199 - 5.920 ms
+
+2016/02/25 15:07:57.157 - info: ::1 - GET /api/users?limit=10&order=1&page=1&search=userId&sort=name&value= HTTP/1.1 200 199 - 4.961 ms
+
+2016/02/25 15:07:58.102 - info: ::1 - GET /api/users?limit=10&order=1&page=1&search=userId&sort=role&value= HTTP/1.1 200 199 - 4.734 ms
+
+2016/02/25 15:07:58.709 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=role&value= HTTP/1.1 200 199 - 3.945 ms
+
+2016/02/25 15:07:59.606 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=regDate&value= HTTP/1.1 304 - - 5.384 ms
+
+2016/02/25 15:08:00.228 - info: ::1 - GET /api/users?limit=10&order=1&page=1&search=userId&sort=regDate&value= HTTP/1.1 304 - - 4.809 ms
+
+2016/02/25 15:10:51.890 - info: ::1 - GET /admin HTTP/1.1 304 - - 2.068 ms
+
+2016/02/25 15:10:52.181 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 6.229 ms
+
+2016/02/25 15:11:12.681 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.581 ms
+
+2016/02/25 15:11:12.981 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 3.398 ms
+
+2016/02/25 15:11:29.484 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.656 ms
+
+2016/02/25 15:11:29.759 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 6.150 ms
+
+2016/02/25 15:11:48.650 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.529 ms
+
+2016/02/25 15:11:48.950 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 4.528 ms
+
+2016/02/25 15:11:50.638 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=regDate&value= HTTP/1.1 304 - - 6.955 ms
+
+2016/02/25 15:11:51.304 - info: ::1 - GET /api/users?limit=10&order=1&page=1&search=userId&sort=regDate&value= HTTP/1.1 304 - - 4.974 ms
+
+2016/02/25 15:11:52.403 - info: ::1 - GET /api/users?limit=10&order=1&page=1&search=userId&sort=role&value= HTTP/1.1 304 - - 6.380 ms
+
+2016/02/25 15:11:52.815 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=role&value= HTTP/1.1 304 - - 4.103 ms
+
+2016/02/25 15:11:55.433 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=name&value= HTTP/1.1 304 - - 3.778 ms
+
+2016/02/25 15:11:56.009 - info: ::1 - GET /api/users?limit=10&order=1&page=1&search=userId&sort=name&value= HTTP/1.1 304 - - 4.911 ms
+
+2016/02/25 15:11:58.130 - info: ::1 - GET /api/users?limit=10&order=1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 4.264 ms
+
+2016/02/25 15:11:58.849 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 4.175 ms
+
+2016/02/25 15:12:00.475 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=name&value= HTTP/1.1 304 - - 5.206 ms
+
+2016/02/25 15:12:01.650 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 3.967 ms
+
+2016/02/25 15:12:02.819 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=role&value= HTTP/1.1 304 - - 4.536 ms
+
+2016/02/25 15:12:03.853 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=regDate&value= HTTP/1.1 304 - - 5.301 ms
+
+2016/02/25 15:12:06.686 - info: ::1 - GET /api/users?limit=10&order=1&page=1&search=userId&sort=regDate&value= HTTP/1.1 304 - - 5.377 ms
+
+2016/02/25 15:12:07.524 - info: ::1 - GET /api/users?limit=10&order=1&page=1&search=userId&sort=role&value= HTTP/1.1 304 - - 4.063 ms
+
+2016/02/25 15:12:08.501 - info: ::1 - GET /api/users?limit=10&order=1&page=1&search=userId&sort=name&value= HTTP/1.1 304 - - 6.251 ms
+
+2016/02/25 15:12:09.262 - info: ::1 - GET /api/users?limit=10&order=1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 4.872 ms
+
+2016/02/25 15:29:33.216 - info: total:300 page:1 rows:10
+2016/02/25 15:29:33.217 - info: ::1 - GET /api/samples?limit=10&order=-1&page=1&search=key&sort=key&value= HTTP/1.1 200 411 - 6.014 ms
+
+2016/02/25 15:29:37.410 - info: total:300 page:1 rows:10
+2016/02/25 15:29:37.411 - info: ::1 - GET /api/samples?limit=10&order=-1&page=1&search=value&sort=value&value= HTTP/1.1 200 401 - 12.029 ms
+
+2016/02/25 15:29:38.480 - info: total:300 page:1 rows:10
+2016/02/25 15:29:38.481 - info: ::1 - GET /api/samples?limit=10&order=1&page=1&search=value&sort=value&value= HTTP/1.1 200 406 - 2.725 ms
+
+2016/02/25 15:29:39.369 - info: total:300 page:1 rows:10
+2016/02/25 15:29:39.370 - info: ::1 - GET /api/samples?limit=10&order=-1&page=1&search=value&sort=value&value= HTTP/1.1 304 - - 2.627 ms
+
+2016/02/25 15:29:42.689 - info: total:300 page:1 rows:10
+2016/02/25 15:29:42.689 - info: ::1 - GET /api/samples?limit=10&order=-1&page=1&search=value&sort=key&value= HTTP/1.1 200 411 - 2.464 ms
+
+2016/02/25 15:29:43.361 - info: total:300 page:1 rows:10
+2016/02/25 15:29:43.362 - info: ::1 - GET /api/samples?limit=10&order=1&page=1&search=value&sort=key&value= HTTP/1.1 200 391 - 2.153 ms
+
+2016/02/25 15:29:51.533 - info: total:300 page:1 rows:10
+2016/02/25 15:29:51.533 - info: ::1 - GET /api/samples?limit=10&order=1&page=1&search=value&sort=key&value= HTTP/1.1 304 - - 2.347 ms
+
+2016/02/25 15:29:53.458 - info: total:300 page:1 rows:10
+2016/02/25 15:29:53.459 - info: ::1 - GET /api/samples?limit=10&order=1&page=1&search=value&sort=key&value= HTTP/1.1 304 - - 2.704 ms
+
+2016/02/25 15:31:13.413 - info: ::1 - GET /menu1 HTTP/1.1 200 5038 - 1.214 ms
+
+2016/02/25 15:31:13.698 - info: total:300 page:1 rows:10
+2016/02/25 15:31:13.698 - info: ::1 - GET /api/samples?limit=10&order=-1&page=1&search=key&sort=key&value= HTTP/1.1 304 - - 4.096 ms
+
+2016/02/25 15:31:16.288 - warn: Not Found
+2016/02/25 15:31:16.289 - info: ::1 - GET /api/samples?limit=10&order=-1&page=1&search=key&sort=key&value=3 HTTP/1.1 404 9 - 2.069 ms
+
+2016/02/25 15:31:20.463 - info: total:100 page:1 rows:10
+2016/02/25 15:31:20.464 - info: ::1 - GET /api/samples?limit=10&order=-1&page=1&search=key&sort=key&value=KEY_1 HTTP/1.1 200 411 - 2.905 ms
+
+2016/02/25 15:31:22.874 - info: total:100 page:2 rows:10
+2016/02/25 15:31:22.875 - info: ::1 - GET /api/samples?limit=10&order=-1&page=2&search=key&sort=key&value=KEY_1 HTTP/1.1 200 411 - 3.163 ms
+
+2016/02/25 15:31:25.792 - warn: Not Found
+2016/02/25 15:31:25.793 - info: ::1 - GET /api/samples?limit=10&order=-1&page=2&search=key&sort=key&value=KEY_10 HTTP/1.1 404 9 - 2.555 ms
+
+2016/02/25 15:31:25.813 - info: total:10 page:1 rows:10
+2016/02/25 15:31:25.814 - info: ::1 - GET /api/samples?limit=10&order=-1&page=1&search=key&sort=key&value=KEY_10 HTTP/1.1 200 410 - 2.694 ms
+
+2016/02/25 15:31:33.482 - warn: Not Found
+2016/02/25 15:31:33.482 - info: ::1 - GET /api/samples?limit=10&order=-1&page=1&search=key&sort=key&value=VALUE_10 HTTP/1.1 404 9 - 1.919 ms
+
+2016/02/25 15:31:37.009 - info: total:11 page:1 rows:10
+2016/02/25 15:31:37.010 - info: ::1 - GET /api/samples?limit=10&order=-1&page=1&search=value&sort=key&value=VALUE_10 HTTP/1.1 200 410 - 3.272 ms
+
+2016/02/25 15:31:39.074 - info: total:11 page:2 rows:1
+2016/02/25 15:31:39.075 - info: ::1 - GET /api/samples?limit=10&order=-1&page=2&search=value&sort=key&value=VALUE_10 HTTP/1.1 200 67 - 4.062 ms
+
+2016/02/25 15:31:43.098 - info: total:11 page:2 rows:1
+2016/02/25 15:31:43.098 - info: ::1 - GET /api/samples?limit=10&order=-1&page=2&search=value&sort=value&value=VALUE_10 HTTP/1.1 200 67 - 1.981 ms
+
+2016/02/25 15:31:45.420 - info: total:11 page:2 rows:1
+2016/02/25 15:31:45.421 - info: ::1 - GET /api/samples?limit=10&order=-1&page=2&search=value&sort=key&value=VALUE_10 HTTP/1.1 304 - - 2.712 ms
+
+2016/02/25 15:32:14.228 - info: ::1 - GET /menu1 HTTP/1.1 304 - - 0.462 ms
+
+2016/02/25 15:32:14.530 - info: total:300 page:1 rows:10
+2016/02/25 15:32:14.531 - info: ::1 - GET /api/samples?limit=10&order=-1&page=1&search=key&sort=key&value= HTTP/1.1 304 - - 2.958 ms
+
+2016/02/25 15:32:29.274 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 4.387 ms
+
+2016/02/25 15:36:35.989 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.429 ms
+
+2016/02/25 15:36:36.300 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 3.038 ms
+
+2016/02/25 15:36:41.820 - info: ::1 - PUT /api/users HTTP/1.1 404 22 - 0.678 ms
+
+2016/02/25 15:37:49.678 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.199 ms
+
+2016/02/25 15:37:49.970 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 3.801 ms
+
+2016/02/25 15:37:53.747 - info: ::1 - PUT /api/users HTTP/1.1 404 22 - 0.157 ms
+
+2016/02/25 15:41:05.491 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.689 ms
+
+2016/02/25 15:41:05.824 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 5.075 ms
+
+2016/02/25 15:41:17.975 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.880 ms
+
+2016/02/25 15:41:18.245 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 3.237 ms
+
+2016/02/25 15:41:20.865 - info: ::1 - PUT /api/users HTTP/1.1 404 22 - 0.123 ms
+
+2016/02/25 15:43:11.490 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.711 ms
+
+2016/02/25 15:43:11.799 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 7.602 ms
+
+2016/02/25 15:43:14.324 - info: Update user:  userId=sfsfsdf, name=22222, regDate=2016-02-25T02:44:28.772Z, role=user
+2016/02/25 15:43:14.334 - info: ::1 - PUT /api/users/sfsfsdf?name=22222&regDate=2016-02-25T02:44:28.772Z&role=user HTTP/1.1 200 2 - 9.750 ms
+
+2016/02/25 15:43:57.042 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.435 ms
+
+2016/02/25 15:43:57.348 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 2.962 ms
+
+2016/02/25 15:44:00.228 - info: Update user:  userId=sfsfsdf, name=22222vvvv, regDate=2016-02-25T02:44:28.772Z, role=user
+2016/02/25 15:44:00.241 - info: ::1 - PUT /api/users/sfsfsdf HTTP/1.1 200 2 - 12.655 ms
+
+2016/02/25 15:44:01.443 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.427 ms
+
+2016/02/25 15:44:01.748 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 200 203 - 2.562 ms
+
+2016/02/25 15:45:58.348 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.630 ms
+
+2016/02/25 15:45:58.652 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 3.275 ms
+
+2016/02/25 15:46:02.355 - info: Update user:  name=fffff
+2016/02/25 15:46:02.360 - info: ::1 - PUT /api/users/sfsfsdf HTTP/1.1 200 2 - 4.592 ms
+
+2016/02/25 15:46:04.405 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.636 ms
+
+2016/02/25 15:46:04.689 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 200 199 - 3.051 ms
+
+2016/02/25 15:47:33.296 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.515 ms
+
+2016/02/25 15:47:33.597 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 4.080 ms
+
+2016/02/25 15:47:39.192 - info: Update user:  name=fffff, role=admin
+2016/02/25 15:47:39.196 - info: ::1 - PUT /api/users/sfsfsdf HTTP/1.1 200 2 - 3.375 ms
+
+2016/02/25 15:47:40.559 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.543 ms
+
+2016/02/25 15:47:40.853 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 200 200 - 3.953 ms
+
+2016/02/25 16:08:11.751 - info: MongoDB connected!
+2016/02/25 16:08:26.600 - info: ::1 - GET /admin HTTP/1.1 304 - - 6.120 ms
+
+2016/02/25 16:08:26.931 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 22.356 ms
+
+2016/02/25 16:08:30.719 - info: Update user:  name=fffff, role=admins
+2016/02/25 16:08:30.731 - warn:  ValidationError: User validation failed
+    at MongooseError.ValidationError (D:\Project\2016\SPA\mean\node_modules\mongoose\lib\error\validation.js:23:11)
+    at model.Document.invalidate (D:\Project\2016\SPA\mean\node_modules\mongoose\lib\document.js:1293:32)
+    at D:\Project\2016\SPA\mean\node_modules\mongoose\lib\document.js:1168:16
+    at validate (D:\Project\2016\SPA\mean\node_modules\mongoose\lib\schematype.js:662:7)
+    at D:\Project\2016\SPA\mean\node_modules\mongoose\lib\schematype.js:693:9
+    at Array.forEach (native)
+    at SchemaString.SchemaType.doValidate (D:\Project\2016\SPA\mean\node_modules\mongoose\lib\schematype.js:667:19)
+    at D:\Project\2016\SPA\mean\node_modules\mongoose\lib\document.js:1166:9
+    at nextTickCallbackWith0Args (node.js:415:9)
+    at process._tickCallback (node.js:344:13)
+2016/02/25 16:08:30.734 - info: ::1 - PUT /api/users/sfsfsdf HTTP/1.1 500 21 - 13.611 ms
+
+2016/02/25 16:08:58.408 - info: Update user:  name=fffff, role=admin
+2016/02/25 16:08:58.414 - info: ::1 - PUT /api/users/sfsfsdf HTTP/1.1 200 2 - 4.858 ms
+
+2016/02/25 16:09:08.686 - info: Update user:  name=fffff, role=
+2016/02/25 16:09:08.689 - warn:  ValidationError: User validation failed
+    at MongooseError.ValidationError (D:\Project\2016\SPA\mean\node_modules\mongoose\lib\error\validation.js:23:11)
+    at model.Document.invalidate (D:\Project\2016\SPA\mean\node_modules\mongoose\lib\document.js:1293:32)
+    at D:\Project\2016\SPA\mean\node_modules\mongoose\lib\document.js:1168:16
+    at validate (D:\Project\2016\SPA\mean\node_modules\mongoose\lib\schematype.js:662:7)
+    at D:\Project\2016\SPA\mean\node_modules\mongoose\lib\schematype.js:693:9
+    at Array.forEach (native)
+    at SchemaString.SchemaType.doValidate (D:\Project\2016\SPA\mean\node_modules\mongoose\lib\schematype.js:667:19)
+    at D:\Project\2016\SPA\mean\node_modules\mongoose\lib\document.js:1166:9
+    at nextTickCallbackWith0Args (node.js:415:9)
+    at process._tickCallback (node.js:344:13)
+2016/02/25 16:09:08.689 - info: ::1 - PUT /api/users/sfsfsdf HTTP/1.1 500 21 - 3.009 ms
+
+2016/02/25 16:15:59.650 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.977 ms
+
+2016/02/25 16:15:59.997 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 8.769 ms
+
+2016/02/25 16:17:26.700 - info: Update user:  name=fffff, role=
+2016/02/25 16:17:26.702 - warn:  ValidationError: User validation failed
+    at MongooseError.ValidationError (D:\Project\2016\SPA\mean\node_modules\mongoose\lib\error\validation.js:23:11)
+    at model.Document.invalidate (D:\Project\2016\SPA\mean\node_modules\mongoose\lib\document.js:1293:32)
+    at D:\Project\2016\SPA\mean\node_modules\mongoose\lib\document.js:1168:16
+    at validate (D:\Project\2016\SPA\mean\node_modules\mongoose\lib\schematype.js:662:7)
+    at D:\Project\2016\SPA\mean\node_modules\mongoose\lib\schematype.js:693:9
+    at Array.forEach (native)
+    at SchemaString.SchemaType.doValidate (D:\Project\2016\SPA\mean\node_modules\mongoose\lib\schematype.js:667:19)
+    at D:\Project\2016\SPA\mean\node_modules\mongoose\lib\document.js:1166:9
+    at nextTickCallbackWith0Args (node.js:415:9)
+    at process._tickCallback (node.js:344:13)
+2016/02/25 16:17:26.703 - info: ::1 - PUT /api/users/sfsfsdf HTTP/1.1 500 21 - 6.872 ms
+
+2016/02/25 16:17:31.307 - info: ::1 - GET /admin HTTP/1.1 304 - - 0.896 ms
+
+2016/02/25 16:17:31.629 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 5.044 ms
+
+2016/02/25 16:18:10.157 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.275 ms
+
+2016/02/25 16:18:10.464 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 3.935 ms
+
+2016/02/25 16:20:31.704 - info: ::1 - GET /admin HTTP/1.1 304 - - 1.161 ms
+
+2016/02/25 16:20:32.026 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 5.552 ms
+
+2016/02/25 16:20:35.071 - info: total:300 page:1 rows:10
+2016/02/25 16:20:35.073 - info: ::1 - GET /api/samples?limit=10&order=-1&page=1&search=key&sort=key&value= HTTP/1.1 304 - - 4.865 ms
+
+2016/02/25 16:20:38.160 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 4.177 ms
+
+2016/02/25 16:20:49.586 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 4.444 ms
+
+2016/02/25 16:38:39.686 - info: ::1 - GET /menu2 HTTP/1.1 200 5046 - 2.107 ms
+
+2016/02/25 17:00:16.653 - info: MongoDB connected!
+2016/02/25 17:00:20.954 - info: ::1 - GET /menu2 HTTP/1.1 200 5280 - 7.016 ms
+
+2016/02/25 17:00:21.205 - info: ::1 - GET /app/menu2/menu2.1.html HTTP/1.1 404 96 - 7.658 ms
+
+2016/02/25 17:00:22.477 - info: ::1 - GET /app/menu2/menu2.1.html HTTP/1.1 404 96 - 1.996 ms
+
+2016/02/25 17:00:25.979 - info: ::1 - GET /menu2/2 HTTP/1.1 200 5280 - 0.936 ms
+
+2016/02/25 17:00:26.210 - info: ::1 - GET /app/menu2.2/menu2.2.html HTTP/1.1 404 96 - 1.420 ms
+
+2016/02/25 17:00:54.885 - info: ::1 - GET /menu2/2 HTTP/1.1 304 - - 0.664 ms
+
+2016/02/25 17:01:00.791 - info: ::1 - GET /menu2/ HTTP/1.1 200 5280 - 1.119 ms
+
+2016/02/25 17:02:28.454 - info: ::1 - GET /menu2 HTTP/1.1 304 - - 1.673 ms
+
+2016/02/25 17:06:40.293 - info: ::1 - GET /menu2/1 HTTP/1.1 200 5280 - 1.673 ms
+
+2016/02/25 17:07:18.865 - info: ::1 - GET /menu2/2 HTTP/1.1 304 - - 0.863 ms
+
+2016/02/25 17:27:18.335 - info: ::1 - GET /menu2/2 HTTP/1.1 304 - - 0.511 ms
+
+2016/02/25 17:27:21.104 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 0.520 ms
+
+2016/02/25 17:27:25.137 - info: ::1 - GET /menu2/2 HTTP/1.1 304 - - 1.110 ms
+
+2016/02/25 17:27:29.105 - info: ::1 - GET /menu2/ HTTP/1.1 304 - - 0.615 ms
+
+2016/02/25 17:27:34.168 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 0.576 ms
+
+2016/02/25 17:31:03.004 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 0.573 ms
+
+2016/02/25 17:31:03.263 - info: ::1 - GET /app/menu2/left.sidebar.html HTTP/1.1 404 96 - 2.059 ms
+
+2016/02/25 17:31:13.541 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 0.704 ms
+
+2016/02/25 17:31:13.815 - info: ::1 - GET /app/menu2/left.sidebar.html HTTP/1.1 404 96 - 1.267 ms
+
+2016/02/25 17:31:40.370 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 0.742 ms
+
+2016/02/25 17:33:27.760 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 1.465 ms
+
+2016/02/25 17:34:01.766 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 0.382 ms
+
+2016/02/25 17:34:29.049 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 0.655 ms
+
+2016/02/25 17:34:40.598 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 3.060 ms
+
+2016/02/25 17:40:23.040 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 0.522 ms
+
+2016/02/25 17:40:47.006 - info: MongoDB connected!
+2016/02/25 17:41:07.419 - info: ::1 - GET /menu2/1 HTTP/1.1 200 5346 - 14.793 ms
+
+2016/02/25 17:42:32.400 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 3.676 ms
+
+2016/02/25 17:42:43.850 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 1.277 ms
+
+2016/02/25 17:42:55.443 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 1.018 ms
+
+2016/02/25 17:43:21.587 - info: ::ffff:127.0.0.1 - GET /menu2/1 HTTP/1.1 304 - - 1.912 ms
+
+2016/02/25 17:43:23.080 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 2.260 ms
+
+2016/02/25 17:43:31.199 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 1.151 ms
+
+2016/02/25 17:43:40.401 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 1.066 ms
+
+2016/02/25 17:43:41.635 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 2.144 ms
+
+2016/02/25 17:44:00.844 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 1.844 ms
+
+2016/02/25 17:44:01.783 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 4.060 ms
+
+2016/02/25 17:44:15.014 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 4.366 ms
+
+2016/02/25 17:45:10.359 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 0.966 ms
+
+2016/02/25 17:47:25.296 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 0.987 ms
+
+2016/02/25 17:47:26.803 - info: total:300 page:1 rows:10
+2016/02/25 17:47:26.806 - info: ::1 - GET /api/samples?limit=10&order=-1&page=1&search=key&sort=key&value= HTTP/1.1 304 - - 20.251 ms
+
+2016/02/25 17:47:47.114 - info: ::1 - GET /menu2/2 HTTP/1.1 200 5346 - 2.148 ms
+
+2016/02/25 17:49:34.155 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 0.678 ms
+
+2016/02/25 17:50:24.760 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 1.351 ms
+
+2016/02/25 17:50:47.869 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 2.381 ms
+
+2016/02/25 17:54:22.948 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 2.216 ms
+
+2016/02/25 18:00:42.985 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 0.936 ms
+
+2016/02/25 18:01:26.645 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 1.036 ms
+
+2016/02/25 18:02:30.214 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 1.007 ms
+
+2016/02/25 18:03:27.543 - info: ::1 - GET /menu2/1 HTTP/1.1 304 - - 0.396 ms
+
+2016/02/25 18:05:07.414 - info: ::1 - GET /menu2/2 HTTP/1.1 304 - - 0.349 ms
+
+2016/02/25 18:05:10.297 - info: total:300 page:1 rows:10
+2016/02/25 18:05:10.298 - info: ::1 - GET /api/samples?limit=10&order=-1&page=1&search=key&sort=key&value= HTTP/1.1 304 - - 6.946 ms
+
+2016/02/25 18:05:11.432 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 6.291 ms
+
+2016/02/25 18:05:13.421 - info: total:300 page:1 rows:10
+2016/02/25 18:05:13.421 - info: ::1 - GET /api/samples?limit=10&order=-1&page=1&search=key&sort=key&value= HTTP/1.1 304 - - 3.049 ms
+
+2016/02/25 18:05:54.036 - info: total:300 page:1 rows:10
+2016/02/25 18:05:54.037 - info: ::1 - GET /api/samples?limit=10&order=-1&page=1&search=key&sort=key&value= HTTP/1.1 304 - - 2.680 ms
+
+2016/02/25 18:07:25.421 - info: ::1 - GET /menu2/2 HTTP/1.1 304 - - 1.477 ms
+
+2016/02/25 18:07:29.555 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 4.370 ms
+
+2016/02/25 18:07:47.790 - info: ::1 - GET /menu2/2 HTTP/1.1 304 - - 0.398 ms
+
+2016/02/25 18:07:50.069 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 3.648 ms
+
+2016/02/25 18:07:50.941 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 4.046 ms
+
+2016/02/25 18:07:53.920 - info: total:300 page:1 rows:10
+2016/02/25 18:07:53.921 - info: ::1 - GET /api/samples?limit=10&order=-1&page=1&search=key&sort=key&value= HTTP/1.1 304 - - 4.030 ms
+
+2016/02/25 18:07:59.019 - info: ::1 - GET /api/users?limit=10&order=-1&page=1&search=userId&sort=userId&value= HTTP/1.1 304 - - 3.151 ms
+

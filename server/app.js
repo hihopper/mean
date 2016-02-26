@@ -2,7 +2,11 @@
 
 // Set default node environment to development
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-
+process.on('uncaughtException', function (err) {
+  global.logger.error('uncaughtException: ');
+  global.logger.error(err.stack);
+  process.exit(-1);
+});
 
 var express = require('express');
 var mongoose = require('mongoose');
@@ -14,7 +18,7 @@ global.logger.config(config.log);
 
 mongoose.connect(config.mongo.uri, config.mongo.options);
 mongoose.connection.on('error', function(err) {
-  global.logger.info('MongoDB connection error: ' + err);
+  global.logger.error('MongoDB connection error: ' + err);
   process.exit(-1);
 });
 
@@ -36,7 +40,14 @@ if(config.seedDB) {
 
 
 var app = express();
-
+/*
+app.use(function(req, res, next) {
+  var domain = require('domain').create();
+  domain.on('error', function(err) {
+    console.error('DOMAIN ERROR:', "aa!!!!" + err.stack);
+  });
+});
+*/
 if(config.seedDB) {
     app.use('/api/seedDB', require('./setting/seed'));
 }

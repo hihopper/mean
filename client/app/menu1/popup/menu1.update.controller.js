@@ -2,7 +2,7 @@
 
 angular.module('smsApp').controller('Menu1UpdateCtrl', function($scope, SamplesAPI, usSpinnerService, row) {
 
-  $scope.sample = row;
+  $scope.sample = angular.copy(row);
 
   $scope.update = function() {
     usSpinnerService.spin('spinner-modal');

@@ -46,4 +46,11 @@ module.exports = function(app) {
     app.use(require("morgan")("short", { "stream": global.logger.stream }));
   }
 
+  app.use( function( err, req, res, next) {
+    console.error('500 Error');
+    console.error(err.stack);
+
+    res.status(500);
+    res.send('500 - server error');
+  }); // Error handler - has to be last
 };

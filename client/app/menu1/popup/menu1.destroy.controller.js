@@ -2,7 +2,7 @@
 
 angular.module('smsApp').controller('Menu1DestroyCtrl', function($scope, SamplesAPI, usSpinnerService, row) {
 
-  $scope.row = row;
+  $scope.row = angular.copy(row);
 
   $scope.close = function() {
     $scope.$dismiss();

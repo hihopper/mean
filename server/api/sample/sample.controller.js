@@ -1,6 +1,6 @@
 'use strict'
 
-var Samples = require('./samples.model');
+var Sample = require('./sample.model');
 var _ = require('lodash');
 
 exports.index = function( req, res ) {
@@ -21,7 +21,7 @@ exports.index = function( req, res ) {
                   };
   options.sort[(req.query.sort || 'key').toLowerCase()] = parseInt(req.query.order) || -1 ;
 
-  Samples.paginate( query, options,
+  Sample.paginate( query, options,
                     function (err, result) {
                       if(err) { return errorHandler(500, res, err); }
                       if(!result.docs.length) { return errorHandler(404, res, 'Not Found'); }
@@ -43,7 +43,7 @@ exports.index = function( req, res ) {
 
 
 /*
-  Samples.find( function( err, rows ) {
+  Sample.find( function( err, rows ) {
     if( err || !rows ) {
       console.log( err );
       return res.status(500).send(err);
@@ -65,9 +65,9 @@ exports.index = function( req, res ) {
 };
 
 exports.create = function(req, res) {
-  global.logger.info('Create samples: ', req.body);
+  global.logger.info('Create sample: ', req.body);
 
-  Samples.create(req.body, function(err, row) {
+  Sample.create(req.body, function(err, row) {
     if(err) { return errorHandler(500, res, err); }
     return res.status(201).json(row);
   });
@@ -76,9 +76,9 @@ exports.create = function(req, res) {
 exports.update = function( req, res ) {
   if(req.body.key) { delete req.body.key; }
 
-  global.logger.info('Update samples: ', req.body);
+  global.logger.info('Update sample: ', req.body);
 
-  Samples.findOne({ key: req.params.key }, function(err, row) {
+  Sample.findOne({ key: req.params.key }, function(err, row) {
     if(err) { return errorHandler(500, res, err); }
     if(!row) { return errorHandler(404, res, 'Not Found'); }
 
@@ -93,9 +93,9 @@ exports.update = function( req, res ) {
 };
 
 exports.delete = function( req, res ) {
-  global.logger.info('Delete samples: key=', req.params.key);
+  global.logger.info('Delete sample: key=', req.params.key);
 
-  Samples.findOne({ key: req.params.key }, function(err, row) {
+  Sample.findOne({ key: req.params.key }, function(err, row) {
     if(err) { return errorHandler(500, res, err); }
     if(!row) { return errorHandler(404, res, 'Not Found'); }
 

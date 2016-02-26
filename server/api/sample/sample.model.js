@@ -3,15 +3,11 @@
 var mongoose = require('mongoose');
 var mongoosePaginate = require('mongoose-paginate');
 
-var samplesSchema = mongoose.Schema({
+var sampleSchema = mongoose.Schema({
   key: { type: String,  index: { unique: true }, require: true },
   value: String
 });
 
+sampleSchema.plugin(mongoosePaginate);
 
-
-
-
-samplesSchema.plugin(mongoosePaginate);
-
-module.exports = mongoose.model('Samples', samplesSchema);
+module.exports = mongoose.model('Sample', sampleSchema);
