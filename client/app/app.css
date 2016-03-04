@@ -1,12 +1,14 @@
 .body {
   padding-top: 50px;
 }
-/*
+
 @media(max-width:48em){
   .hide_sm {
     display: none;
   }
 }
+/*
+
 @media(min-width:48em){
   .show_sm {
     display: none;

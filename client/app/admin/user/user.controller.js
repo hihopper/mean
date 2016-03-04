@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('smsApp').controller('AdminCtrl', function ($scope, $modal, UserAPI, usSpinnerService, $window) {
+angular.module('smsApp').controller('AdminUserCtrl', function ($scope, $modal, UserAPI, usSpinnerService, $window) {
 
   $scope.searches = [
     { key: 'userId' , text: '사용자ID' },

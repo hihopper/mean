@@ -17,7 +17,12 @@ var config = {
   // seed DB
   seedDB: true,
 
+  secrets: {
+    session: 'serets_session'
+  },
+
   mongo: {
+    db_name: 'heroku_l85p17kb',
     uri: 'mongodb://hopper:aaaa1111@ds047325.mongolab.com:47325/heroku_l85p17kb',
     options: {
       db: {

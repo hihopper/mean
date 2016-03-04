@@ -5,6 +5,8 @@ var path = require('path');
 
 module.exports = function(app) {
 
+  app.use('/auth', require('./auth'));
+
   // Insert routes below
   app.use('/api/samples', require('./api/sample'));
   app.use('/api/users', require('./api/user'));

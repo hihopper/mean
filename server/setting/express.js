@@ -4,7 +4,13 @@ var express = require('express');
 var favicon = require('serve-favicon');
 var morgan = require('morgan')
 var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
+var mongoStore = require('connect-mongo')(session);
+var mongoose = require('mongoose');
+var passport = require('passport');
 var path = require('path');
+
 
 //var logger = require('../components/logger');
 var config = require('./config');
@@ -17,6 +23,23 @@ module.exports = function(app) {
   app.set('view engine', 'html');
   app.use(bodyParser.urlencoded({ extended: false}));
   app.use(bodyParser.json());
+  app.use(cookieParser());
+  app.use(session({
+    secret: config.secrets.session,
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+      //    maxAge: 1000 * 60 * 60 * 24 * 7
+      maxAge: 1000 * 60 * 60
+      //    secure: true
+    },
+    store: new mongoStore({
+      mongooseConnection: mongoose.connection,
+      db: config.mongo.db_name
+    })
+  }));
+  app.use(passport.initialize());
+
   /*
   app.use(function(req, res, next) {
     var cluster = require('cluster');

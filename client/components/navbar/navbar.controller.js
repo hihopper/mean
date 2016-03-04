@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('smsApp')
-  .controller('NavbarCtrl', ['$scope', '$state', '$window', function ($scope, $state, $window) {
+  .controller('NavbarCtrl', ['$scope', '$state', '$window', 'Auth', function ($scope, $state, $window, Auth) {
     $scope.isCollapsed = true;
 
     $scope.isSmall = $window.innerWidth < 760;
@@ -25,4 +25,6 @@ angular.module('smsApp')
     $scope.menuClick = function() {
       $scope.isCollapsed = true;
     };
+
+    $scope.isLoggedIn = Auth.isLoggedIn;
   }]);

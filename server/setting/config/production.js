@@ -17,7 +17,12 @@ var config = {
   // seed DB
   seedDB: true,
 
+  secrets: {
+    session: 'serets_session'
+  },
+
   mongo: {
+    db_name: 'sms',
     uri: 'mongodb://localhost/sms',
     options: {
       db: {

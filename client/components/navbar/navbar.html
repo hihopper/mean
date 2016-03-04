@@ -14,11 +14,20 @@
         <li ng-class="{active: isActive('menu1')}" ><a ui-sref="menu1" ng-click="menuClick()">Menu1</a></li>
         <li ng-class="{active: isActive('menu2')}" ><a ui-sref="menu2/1" ng-click="menuClick()">Menu2</a></li>
         <li ng-show="isSmall" ng-class="{active: isActive('menu2')}" ><a ui-sref="menu2/1" ng-click="menuClick()">Menu2222</a></li>
-        <li ng-class="{active: isActive('admin')}" ><a ui-sref="admin" ng-click="menuClick()">Admin</a></li>
+        <li ng-class="{active: isActive('admin')}" ><a ui-sref="admin/user" ng-click="menuClick()">Admin</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li ng-hide="isLoggedIn()"><a ui-sref="signup"> SignUp</a></li>
+        <li ng-hide="isLoggedIn()"><a ui-sref="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li ng-show="isLoggedIn()"><a ui-sref="logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+<!--
+        <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="signup">Sign up</a></li>
+        <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="login">Login</a></li>
+        <li ng-show="nav.isLoggedIn()"><p class="navbar-text">Hello {{ nav.getCurrentUser().name }}</p> </li>
+        <li ng-show="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="settings"><span class="glyphicon glyphicon-cog"></span></a></li>
+        <li ng-show="nav.isLoggedIn()"><a ui-sref="logout">Logout</a></li>
+-->
       </ul>
     </div>
   </div>

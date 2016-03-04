@@ -23,13 +23,13 @@ module.exports = {
   },
 
   warn: function(msg) {
+    console.log.apply(this, arguments);
     if( _log.constructor === winston.Logger ) { _log.warn.apply(this, arguments); }
-    else { console.log.apply(this, arguments); }
   },
 
   info: function(msg) {
-    if( _log.constructor === winston.Logger ) { _log.info.apply(this, arguments); }
-    else { console.log.apply(this, arguments); }
+    console.log.apply(this, arguments);
+    if( _log.constructor === winston.Logger ) {  _log.info.apply(this, arguments); }
   },
 
   debug: function(msg) {
@@ -66,25 +66,6 @@ module.exports = {
             timestamp: function(){
               return moment().format("YYYY/MM/DD HH:mm:ss.SSS");
             }
-          }),
-          new winston.transports.Console({
-            level: 'debug',
-            handleExceptions: true,
-            json: false,
-            colorize: true
-          })
-        ],
-        exitOnError: false
-      });
-    }
-    else {
-      _log = new winston.Logger({
-        transports: [
-          new winston.transports.Console({
-            level: 'debug',
-            handleExceptions: true,
-            json: false,
-            colorize: true
           })
         ],
         exitOnError: false

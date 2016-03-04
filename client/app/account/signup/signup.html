@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <br>
+      <h2>신규 회원 가입</h2>
+      <hr class="divider">
+      <br>
+    </div>
+    <div class="col-sm-12">
+      <form class="form" name="form" ng-submit="register(form)" novalidate>
+
+        <div class="form-group" ng-class="{ 'has-success': form.userId.$valid && submitted,
+                                            'has-error': form.userId.$invalid && submitted }">
+          <label>사용자 ID</label>
+
+          <input type="userId" name="userId" class="form-control" ng-model="user.userId" required/>
+          <p class="help-block" ng-show="form.userId.$error.userId && submitted">
+            올바른 사용자 ID가 아닙니다.
+          </p>
+          <p class="help-block" ng-show="form.userId.$error.required && submitted">
+            사용자 ID는 필수 입력 요소 입니다.
+          </p>
+          <p class="help-block" ng-show="form.userId.$error.mongoose">
+            {{ errors.userId }}
+          </p>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-success': form.password.$valid && submitted,
+                                            'has-error': form.password.$invalid && submitted }">
+          <label>Password</label>
+
+          <input type="password" name="passwd" class="form-control" ng-model="user.password"
+                 ng-minlength="3"
+                 required
+                 />
+          <p class="help-block"
+             ng-show="(form.password.$error.minlength || form.password.$error.required) && submitted">
+            Password must be at least 3 characters.
+          </p>
+          <p class="help-block" ng-show="form.password.$error.mongoose">
+            {{ errors.password }}
+          </p>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-success': form.confirmPassword.$valid && submitted,
+                                            'has-error': form.confirmPassword.$invalid && submitted }">
+          <label>Confirm Password</label>
+          <input type="password" name="confirmPassword" class="form-control" ng-model="user.confirmPassword"
+                 match="user.password"
+                 ng-minlength="3" required/>
+          <p class="help-block"
+             ng-show="form.confirmPassword.$error.match && submitted">
+            Passwords must match.
+          </p>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
+                                            'has-error': form.name.$invalid && submitted }">
+          <label>Name</label>
+
+          <input type="text" name="name" class="form-control" ng-model="user.name" required/>
+          <p class="help-block" ng-show="form.name.$error.required && submitted">
+            A name is required
+          </p>
+        </div>
+        <div class="pull-right">
+          <button class="btn btn-inverse btn-lg btn-register" type="submit">
+            가입신청
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

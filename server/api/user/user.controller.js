@@ -2,6 +2,7 @@
 
 var User = require('./user.model');
 var _ = require('lodash');
+var winston = require('winston');
 
 exports.index = function( req, res ) {
   var query = {};//{ userId: req.user.userId };
@@ -36,6 +37,8 @@ exports.index = function( req, res ) {
 
 exports.create = function(req, res) {
   global.logger.info('Create user: ', req.body);
+  if( !req.body.userId ) req.body.userId = '';
+
   req.body.regDate = new Date();
   User.create(req.body, function(err, row) {
     if(err) { return errorHandler(500, res, err); }
@@ -81,5 +84,5 @@ exports.delete = function( req, res ) {
 
 function errorHandler(status, res, err) {
   global.logger.warn(err);
-  return res.sendStatus(status);
+  return res.status(status).json(err);
 }

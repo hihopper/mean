@@ -34,12 +34,9 @@ mongoose.connection.on('disconnected', function () {
 });
 
 
-if(config.seedDB) {
-//  require('./setting/seed');
-}
-
 
 var app = express();
+
 /*
 app.use(function(req, res, next) {
   var domain = require('domain').create();
